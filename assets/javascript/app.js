@@ -16,8 +16,10 @@ var game = {
         game.questionNumber++;
     },
     reset: function() {
+        i = 0;
         game.correct = 0;
         game.questionNumber = 0;
+        $("#stats").html("number correct: " + game.correct + "<br>" + "number incorrect: " + game.incorrect);
         clicked = false;
         question.askQuestion(0);
     }
@@ -25,32 +27,94 @@ var game = {
 
 var question = {
     choices: [{
-        ask: "What is the answer to this question?", //question[0].choices.ask
+        ask: "What town in the Charlotte metro area was the site of America's first documented gold find?", //question[0].choices.ask
         type: "question1",
-        choice1: "answer1",
-        choice2: "answer2",
-        choice3: "answer3",
-        choice4: "answer4",
+        choice1: "Cornelius",
+        choice2: "Weddington",
+        choice3: "King's Mountain",
+        choice4: "Midland",
         answer: 4
 
     }, {
-        ask: "Do you know this one?",
+        ask: "What two major Charlotte roads were once Native American trading routes?",
         type: "question2",
-        choice1: "know1",
-        choice2: "know2",
-        choice3: "know3",
-        choice4: "know4",
+        choice1: "Providence and Trade",
+        choice2: "Tryon and Trade",
+        choice3: "Tyvola and Park",
+        choice4: "Tyvola and Davidson",
         answer: 2
 
     }, {
-        ask: "Or how about this one right here?",
+        ask: "What high school did NBA superstar Steph Curry attend?",
         type: "question3",
-        choice1: "choice1",
-        choice2: "choice2",
-        choice3: "choice3",
-        choice4: "choice4",
+        choice1: "Charlotte Latin",
+        choice2: "Charlotte Country Day",
+        choice3: "Charlotte Christian",
+        choice4: "Providence Day",
         answer: 3
 
+    }, {
+        ask: "Why was Charlotte's central business district first referred to as 'uptown' instead of 'downtown'?",
+        type: "question4",
+        choice1: "The name stuck after Queen Elizabeth coined the term during a visit",
+        choice2: "The founders of Charlotte thought it would better market the area by connoting a positive atmosphere",
+        choice3: "It's the highest point of elevation in the city",
+        choice4: "The majority of the city limits were to the south (below) of the business district",
+        answer: 3
+
+    }, {
+        ask: "What infamous Charlotte gang was featured on History Channel's 'Gangland'?",
+        type: "question5",
+        choice1: "The Hive",
+        choice2: "Hidden Valley Kings",
+        choice3: "QC Clique",
+        choice4: "White Tigers",
+        answer: 2
+
+    }, {
+        ask: "Located just south of Charlotte, the town of Pineville was the birthplace of what US President?",
+        type: "question6",
+        choice1: "James K. Polk",
+        choice2: "Howard Taft",
+        choice3: "Andrew Jackson",
+        choice4: "Grover Cleveland",
+        answer: 1
+
+    }, {
+        ask: "Who is the only Carolina Panther to win the NFL's MVP award?",
+        type: "question7",
+        choice1: "Luke Kuechly",
+        choice2: "Cam Newton",
+        choice3: "Brenton Bersin",
+        choice4: "Steve Smith",
+        answer: 2
+
+    }, {
+        ask: "What high school did NBA superstar Steph Curry attend?",
+        type: "question8",
+        choice1: "Charlotte Latin",
+        choice2: "Charlotte Country Day",
+        choice3: "Charlotte Christian",
+        choice4: "Providence Day",
+        answer: 4
+
+    }, {
+        ask: "What high school did NBA superstar Steph Curry attend?",
+        type: "question9",
+        choice1: "Charlotte Latin",
+        choice2: "Charlotte Country Day",
+        choice3: "Charlotte Christian",
+        choice4: "Providence Day",
+        answer: 4
+
+    }, {
+        ask: "What high school did NBA superstar Steph Curry attend?",
+        type: "question10",
+        choice1: "Charlotte Latin",
+        choice2: "Charlotte Country Day",
+        choice3: "Charlotte Christian",
+        choice4: "Providence Day",
+        answer: 2
     }],
 
     //userAnswer: [],
@@ -73,7 +137,7 @@ var question = {
     newQuestion: function() {
         if (i < 10) {
             question.askQuestion(i);
-            clicked = true;
+            clicked = false;
         }
         else {
             //display stats and ask if they want to play again
