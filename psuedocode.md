@@ -21,6 +21,10 @@ $(".choice").click(function() {
     var val = $(this).attr('data-value');  //so val="0"
 }
 
+$(document).on("click", "#choices", function() {
+// ...
+});
+
 my program:
     interface and display:
         have a row for title
