@@ -90,34 +90,32 @@ var question = {
         answer: 2
 
     }, {
-        ask: "What high school did NBA superstar Steph Curry attend?",
+        ask: "What is the name of the NASCAR speedway in Concord?",
         type: "question8",
-        choice1: "Charlotte Latin",
-        choice2: "Charlotte Country Day",
-        choice3: "Charlotte Christian",
-        choice4: "Providence Day",
+        choice1: "Coca-Cola Raceway",
+        choice2: "Bojangles Speedway",
+        choice3: "Bank of America Raceway",
+        choice4: "Lowe's Motor Speedway",
         answer: 4
 
     }, {
-        ask: "What high school did NBA superstar Steph Curry attend?",
+        ask: "In the movie 'Bad Grandpa', what local restaurant did actor Johnny Knoxville visit?",
         type: "question9",
-        choice1: "Charlotte Latin",
-        choice2: "Charlotte Country Day",
-        choice3: "Charlotte Christian",
-        choice4: "Providence Day",
+        choice1: "Cook-Out",
+        choice2: "Amelie's",
+        choice3: "Soul Gastrolounge",
+        choice4: "The Penguin Drive-In",
         answer: 4
 
     }, {
-        ask: "What high school did NBA superstar Steph Curry attend?",
+        ask: "What was the name of Charlotte's NBA team from 2004-2014?",
         type: "question10",
-        choice1: "Charlotte Latin",
-        choice2: "Charlotte Country Day",
-        choice3: "Charlotte Christian",
-        choice4: "Providence Day",
+        choice1: "Hornets",
+        choice2: "Bobcats",
+        choice3: "Knights",
+        choice4: "Checkers",
         answer: 2
     }],
-
-    //userAnswer: [],
 
     askQuestion: function(i) {
         $("#question").text(question.choices[i].ask);
