@@ -1,51 +1,87 @@
 body {
-    background-color: grey;
+    background-image: url("../images/central-skyline-web1-1024x455.jpg");
+    font-family: 'Roboto', sans-serif;
 }
 
+h3,
 h4 {
     text-align: center;
+    font-weight: bold;
+    color: #201747;
 }
 
-.row.content {
-    height: 1500px
+button {
+    color: #00778B;
+    background-color: #201747;
+    font-size: larger;
 }
+
+/*.row.content {*/
+
+/*    height: 1500px;*/
+
+/*}*/
 
 .panel-footer {
     background-color: white;
-    color: teal;
+    color: #00778B;
+    border-color: transparent;
 }
 
 .panel {
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 6px 8px 16px -6px purple;
+    color: #201747;
+    box-shadow: 8px 8px 10px 5px #201747;
+    background-color: #00778B;
+    text-align: center;
+    border-color: transparent;
 }
 
 .jumbotron {
-    color: teal;
-    box-shadow: 0 8px 16px -6px purple;
-    background-color: white;
+    color: #201747;
+    box-shadow: 12px 12px 18px 5px #201747;
+    background-color: #00778B;
     text-align: center;
-    top-margin: 10px;
+    margin-top: 20px;
+    font-family: 'Lobster', cursive;
+
 }
 
 .col-sm-3 {
     text-align: center;
 }
 
-#question,
+#question {
+    color: #201747;
+    font-size: larger;
+    font-family: 'Fredoka One', cursive;
+}
+
 #choices {
+    font-size: larger;
+    background-color: #201747;
+    font-family: 'Fredoka One', cursive;
+}
+
+#stats {
+    background-color: white;
+    color: #00778B;
+    font-weight: bold;
     font-size: larger;
 }
 
-/* On small screens, set height to 'auto' for sidenav and grid */
+button:hover {
+    color: #201747;
+    background-color: #00778B;
+}
 
-@media screen and (max-width: 767px) {
-    .col-sm-3 {
-        height: auto;
-        padding: 15px;
-    }
-    .row.content {
-        height: auto;
+.selector:hover {
+    color: #201747;
+    background-color: #00778B;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: none;
+        background-color: white;
     }
 }

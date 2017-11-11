@@ -55,10 +55,10 @@ var question = {
     }, {
         ask: "Why was Charlotte's central business district first referred to as 'uptown' instead of 'downtown'?",
         type: "question4",
-        choice1: "The name stuck after Queen Elizabeth coined the term during a visit",
-        choice2: "The founders of Charlotte thought it would better market the area by connoting a positive atmosphere",
-        choice3: "It's the highest point of elevation in the city",
-        choice4: "The majority of the city limits were to the south (below) of the business district",
+        choice1: "The name stuck after Queen Elizabeth coined the term during a visit.",
+        choice2: "The founders of Charlotte thought it would better market the area by connoting a positive atmosphere.",
+        choice3: "It's the highest point of elevation in the city.",
+        choice4: "The majority of the city limits were to the south (below) of the business district.",
         answer: 3
 
     }, {
@@ -93,7 +93,7 @@ var question = {
         type: "question8",
         choice1: "Pepsi Motor Raceway",
         choice2: "Bojangles Speedway",
-        choice3: "Bank of America Raceway",
+        choice3: "Charlotte Motor Speedway",
         choice4: "Lowe's Motor Speedway",
         answer: 4
 
@@ -117,6 +117,10 @@ var question = {
     }],
 
     askQuestion: function(i) {
+        var questionsLeft = 10 - i;
+        $("#numQuestion").text("Questions Left: " + questionsLeft);
+        $("#numCorrect").text("Correct: " + game.correct);
+        $("#numIncorrect").text("Incorrect: " + game.incorrect);
         $("#question").text(question.choices[i].ask);
         $("#choices div:nth-child(1)").text(question.choices[i].choice1);
         $("#choices div:nth-child(2)").text(question.choices[i].choice2);
