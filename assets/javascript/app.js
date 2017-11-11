@@ -17,7 +17,6 @@ var game = {
     },
     reset: function() {
         i = 0;
-        game.correct = 0;
         game.questionNumber = 0;
         $("#stats").html("number correct: " + game.correct + "<br>" + "number incorrect: " + game.incorrect);
         clicked = false;
@@ -36,7 +35,7 @@ var question = {
         answer: 4
 
     }, {
-        ask: "What two major Charlotte roads were once Native American trading routes?",
+        ask: "What two major Charlotte roads evolved from former Native American trading routes?",
         type: "question2",
         choice1: "Providence and Trade",
         choice2: "Tryon and Trade",
@@ -81,18 +80,18 @@ var question = {
         answer: 1
 
     }, {
-        ask: "Who is the only Carolina Panther to win the NFL's MVP award?",
+        ask: "Who is the only Carolina Panther to win the NFL's Most Valuable Player award?",
         type: "question7",
         choice1: "Luke Kuechly",
-        choice2: "Cam Newton",
-        choice3: "Brenton Bersin",
+        choice2: "Brenton Bersin",
+        choice3: "Cam Newton",
         choice4: "Steve Smith",
-        answer: 2
+        answer: 3
 
     }, {
         ask: "What is the name of the NASCAR speedway in Concord?",
         type: "question8",
-        choice1: "Coca-Cola Raceway",
+        choice1: "Pepsi Motor Raceway",
         choice2: "Bojangles Speedway",
         choice3: "Bank of America Raceway",
         choice4: "Lowe's Motor Speedway",
